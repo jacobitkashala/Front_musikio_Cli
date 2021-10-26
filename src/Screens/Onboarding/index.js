@@ -1,21 +1,26 @@
 import React from 'react';
-import {StatusBar, StyleSheet, Text, Image} from 'react-native';
+import {
+  StatusBar,
+  StyleSheet,
+  Text,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
 import styled from 'styled-components/native';
 import {Images, Colors, Metrics} from '../../Constants';
-// import {McLogo} from '../../Components';
+// import {McImage} from '../../Components';
 
 const Onboarding = ({loadAssetsAsync}) => {
   return (
     <Container>
       <StatusBar barStyle="light-content" />
       <Image source={Images.logo} style={styles.logo} />
-      <Image
-        source={Images.cover}
-        style={styles.image}
-        onClick={() => {
+      <TouchableOpacity
+        onPress={() => {
           loadAssetsAsync();
-        }}
-      />
+        }}>
+        <Image source={Images.cover} style={styles.image} />
+      </TouchableOpacity>
       <Text style={styles.text}>
         Retrouvez toutes les chansons congolaise préférer
       </Text>

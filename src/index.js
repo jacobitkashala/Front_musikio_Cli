@@ -1,14 +1,14 @@
-import React from 'react';
-// import React, {useState} from 'react';
+import React, {useState} from 'react';
 import {Onboarding} from './Screens';
 // import {Onboarding, Player} from './Screens';
 // import AppNavigator from './Navigation';
 const App = () => {
-  //   const [assetsLoaded, setAssetsLoaded] = useState(true);
+  const [assetsLoaded, setAssetsLoaded] = useState(true);
 
-  //   const loadAssetsAsync = async () => {
-  //     setAssetsLoaded(false);
-  //   };
+  const loadAssetsAsync = async () => {
+    console.log('click');
+    // setAssetsLoaded(false);
+  };
 
   //   return assetsLoaded ? (
   //     <Onboarding loadAssetsAsync={loadAssetsAsync} />
@@ -16,7 +16,7 @@ const App = () => {
   //     <AppNavigator />
   //   );
 
-  return <Onboarding />;
+  return <Onboarding loadAssetsAsync={loadAssetsAsync} />;
 };
 
 export default App;
