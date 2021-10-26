@@ -1,12 +1,11 @@
 import React from 'react';
-import { View, Switch, Button } from 'react-native';
+// import {View, Switch, Button} from 'react-native';
 import styled from 'styled-components/native';
 
 // import { useTheme, Fonts, Images, Metrics } from 'Themes';
-import { McText, McImage, PlayButton } from '../../Components';
+// import { McText, McImage, PlayButton } from '../../Components';
 
-const Profile = ({ navigation }) => {
-
+const Profile = ({navigation}) => {
   return (
     <Container>
       <Title>Profile Screen</Title>
@@ -33,21 +32,20 @@ const Profile = ({ navigation }) => {
 const Container = styled.View`
   flex: 1;
   justify-content: center;
-  align-items: center;
-  background: ${(props) => props.theme.colors.background};
+  background: ${props => props.theme.colors.background};
 `;
 const Title = styled.Text`
   font-size: 30px;
-  color: ${(props) => props.theme.colors.text};
+  color: ${props => props.theme.colors.text};
 `;
-const Text = styled.Text`
-  font-size: 16px;
-  color: ${(props) => props.theme.colors.text};
-`;
-const SwitchSection = styled.View`
-  margin: 30px 0px;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-`;
+// const Text = styled.Text`
+//   font-size: 16px;
+//   color: ${props => props.theme.colors.text};
+// `;
+// const SwitchSection = styled.View`
+//   margin: 30px 0px;
+//   flex-direction: row;
+//   justify-content: center;
+//   -items: center;
+// `;
 export default Profile;

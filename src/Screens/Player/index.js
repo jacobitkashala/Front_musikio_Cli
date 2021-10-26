@@ -4,7 +4,7 @@ import {
   Text,
   StyleSheet,
   View,
-  StatusBar,
+  // StatusBar,
   TextInput,
   FlatList,
 } from 'react-native';
@@ -100,11 +100,10 @@ const playList = [
 ];
 
 const Player = ({navigation}) => {
-  const size = 20;
+  const size = 50;
 
   return (
     <Container>
-      <StatusBar barStyle="light-content" />
       <View style={styles.header}>
         <View style={styles.headerContent}>
           <Text style={styles.textColorActiv}> Chansons </Text>
@@ -140,26 +139,26 @@ const Player = ({navigation}) => {
         />
       </View>
       <View>
-        <FlatList
+        {/* <FlatList
           data={cardData}
           keyExtractor={item => item.id.toString()}
           horizontal
           renderItem={item => (
             <McCardGenre data={item} navigation={navigation} />
           )}
-        />
+        /> */}
       </View>
       <View>
         <TextTitle> Genre</TextTitle>
-        <FlatList
+        {/* <FlatList
           data={Genres}
           keyExtractor={item => item.id.toString()}
           horizontal
           renderItem={item => <McGenre data={item} />}
-        />
+        /> */}
       </View>
       <TextTitle>PlayList</TextTitle>
-      <View style={styles.menuContenaire}>
+      {/* <View style={styles.menuContenaire}>
         <McBox data={playList[0].image} />
         <McBox data={playList[0].image} />
         <McBox data={playList[0].image} />
@@ -168,7 +167,7 @@ const Player = ({navigation}) => {
         <McBox data={playList[0].image} />
         <McBox data={playList[0].image} />
         <McBox data={playList[0].image} />
-      </View>
+      </View> */}
     </Container>
   );
 };
@@ -176,7 +175,6 @@ const Player = ({navigation}) => {
 const Container = styled.SafeAreaView`
   flex: 1;
   background-color: ${Colors.background};
-  alignitems: 'center';
 `;
 const TextTitle = styled.Text`
   color: #a0a0a0;
@@ -184,18 +182,15 @@ const TextTitle = styled.Text`
   font-size: 24px;
   line-height: 28px;
   margin: 10px;
-  alignitems: 'center';
 `;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: Colors.background,
-    alignItems: 'center',
   },
   header: {
     flexDirection: 'row',
-    alignItems: 'center',
     margin: Metrics.s20,
     justifyContent: 'space-between',
   },
@@ -211,7 +206,7 @@ const styles = StyleSheet.create({
     fontSize: Metrics.s24,
   },
   menuContenaire: {
-    height: '40%',
+    height: Metrics.height / 4,
     flexDirection: 'row',
     flexWrap: 'wrap',
   },
@@ -225,7 +220,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     // justifyContent: 'center',
     margin: 20,
-    alignItems: 'center',
+
     padding: 23,
     backgroundColor: 'rgba(196, 196, 196, 0.16)',
     borderRadius: 26,
@@ -233,12 +228,12 @@ const styles = StyleSheet.create({
   textInput: {
     backgroundColor: '#1f1f1f',
     color: Colors.primary,
-    width: '327px',
-    height: '52px',
+    width: 327,
+    height: 52,
     marginLeft: 25,
     borderRadius: 40,
     fontSize: 20,
-    paddingLeft: '20px',
+    paddingLeft: 20,
   },
 });
 export default Player;

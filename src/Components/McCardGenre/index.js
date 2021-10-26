@@ -5,15 +5,11 @@ import {View, Text, Image, StyleSheet} from 'react-native';
 const McCardGenre = ({data, navigation}) => {
   const {item} = data;
   const toAudio = () => {
-    navigation.navigate('Audio', {selectedMusic: item});
+    navigation.navigate('Audio', {selected: item});
   };
   return (
     <View style={styles.container}>
-      <Image
-        style={styles.image}
-        source={{uri: item.image}}
-        onClick={toAudio}
-      />
+      <Image style={styles.image} source={item.image} onClick={toAudio} />
       <Text style={styles.textGenre}>{item.genre}</Text>
     </View>
   );

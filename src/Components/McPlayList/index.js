@@ -9,7 +9,7 @@
 // } from 'react-native';
 // import styled from 'styled-components/native';
 // // import { Metrics } from 'Constants';
-// import McImage from '../McImage';
+// from '../McImage';
 
 // const McPlayList = ({data}) => {
 //   const {image} = data;

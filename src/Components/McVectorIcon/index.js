@@ -1,5 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 
 const McVectorIcon = props => {
   const {type, name, color, size, onPress, style} = props;
@@ -205,7 +204,7 @@ const McVectorIcon = props => {
 };
 
 McVectorIcon.defaultProps = {
-  size: 20,
+  size: 24,
   style: {},
   onPress: null,
   color: '#757575',

@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
-import {Users, Library, Podcast, Favories, Audio} from '../Screens';
+import {Users, Library, Podcast, Favories} from '../Screens';
 import {McVectorIcon} from '../Components';
 import StacksTab from './navigators/StacksTab';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
@@ -32,21 +32,6 @@ export default function AppNavigator() {
         <Tab.Screen
           name="StacksTab"
           component={StacksTab}
-          options={{
-            headerShown: false,
-            tabBarIcon: ({color, size}) => (
-              <McVectorIcon
-                type="Fontisto"
-                name="music-note"
-                color={color}
-                size={size}
-              />
-            ),
-          }}
-        />
-        <Tab.Screen
-          name="Audio"
-          component={Audio}
           options={{
             headerShown: false,
             tabBarIcon: ({color, size}) => (

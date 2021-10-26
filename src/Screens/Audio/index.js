@@ -109,19 +109,17 @@ const HeaderSection = styled.View`
   margin: 12px 24px;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
 `;
 
 const MusicDetailSection = styled.View`
   margin: 0px 24px;
-  align-items: center;
   justify-content: center;
 `;
 
 const ContainerJ = styled.View`
-width: 180,
-height: 180,
-borderRadius: 90,
+width: 180px,
+height: 180px,
+borderRadius: 90px,
 background-color:gray,
 `;
 
@@ -136,7 +134,6 @@ const ControlSection = styled.View`
   margin: 0px 24px;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
 `;
 const styles = StyleSheet.create({
   image: {
@@ -150,13 +147,11 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: 900,
     color: '#ffff',
-    textAlign: 'center',
   },
   title: {
     fontSize: 25,
     fontWeight: 'bold',
     color: '#ffff',
-    textAlign: 'center',
   },
   textMinu: {
     fontSize: 12,
