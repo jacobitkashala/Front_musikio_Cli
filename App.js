@@ -7,14 +7,10 @@
  */
 
 import React from 'react';
-import {Text, View} from 'react-native';
+import Root from './src';
 
 const App = () => {
-  return (
-    <View>
-      <Text>Bien</Text>
-    </View>
-  );
+  return <Root />;
 };
 
 export default App;

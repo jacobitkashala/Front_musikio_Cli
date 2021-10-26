@@ -3,13 +3,13 @@ import {StatusBar, StyleSheet, Text, Image} from 'react-native';
 import styled from 'styled-components/native';
 
 import {Images, Colors, Metrics} from '../../Constants';
-import {McLogo} from '../../Components';
+// import {McLogo} from '../../Components';
 
 const Onboarding = ({loadAssetsAsync}) => {
   return (
     <Container>
       <StatusBar barStyle="light-content" />
-      <McLogo size={Metrics.s50} />
+      <Image source={Images.logo} />
       <Image
         source={Images.cover}
         style={styles.image}
@@ -30,7 +30,7 @@ const Container = styled.SafeAreaView`
 `;
 const styles = StyleSheet.create({
   text: {
-    color: '#C4C4C4',
+    color: Colors.colorText,
     fontSize: Metrics.s20,
     marginLeft: Metrics.s10,
   },
