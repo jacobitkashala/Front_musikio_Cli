@@ -9,7 +9,7 @@ const McCardGenre = ({data, navigation}) => {
   };
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={item.image} onClick={toAudio} />
+      <Image style={styles.image} source={item.image} onPress={toAudio} />
       <Text style={styles.textGenre}>{item.genre}</Text>
     </View>
   );

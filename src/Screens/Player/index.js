@@ -139,23 +139,23 @@ const Player = ({navigation}) => {
         />
       </View>
       <View>
-        {/* <FlatList
+        <FlatList
           data={cardData}
           keyExtractor={item => item.id.toString()}
           horizontal
           renderItem={item => (
             <McCardGenre data={item} navigation={navigation} />
           )}
-        /> */}
+        />
       </View>
       <View>
         <TextTitle> Genre</TextTitle>
-        {/* <FlatList
+        <FlatList
           data={Genres}
           keyExtractor={item => item.id.toString()}
           horizontal
           renderItem={item => <McGenre data={item} />}
-        /> */}
+        />
       </View>
       <TextTitle>PlayList</TextTitle>
       {/* <View style={styles.menuContenaire}>

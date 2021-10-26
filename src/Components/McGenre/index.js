@@ -25,13 +25,13 @@ const styles = StyleSheet.create({
     margin: 2,
     borderRadius: 5,
     flexDirection: 'column',
-    Items: 'center',
     justifyContent: 'center',
   },
   textGenre: {
     color: '#ffff',
     fontSize: 20,
     fontWeight: 'bold',
+    textAlign: 'center',
   },
 });
 
