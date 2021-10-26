@@ -18,8 +18,8 @@ const Audio = ({navigation, route}) => {
   console.log(selectedMusic);
 
   useEffect(() => {
-    let {selectedMusic} = route.params;
-    setSelectedMusic(selectedMusic);
+    let {selected} = route.params;
+    setSelectedMusic(selected);
   }, [route.params]);
   return (
     <Container>
@@ -33,7 +33,7 @@ const Audio = ({navigation, route}) => {
             type="AntDesign"
             name="arrowleft"
             color={Colors.primary}
-            size={24}
+            size={30}
           />
         </TouchableOpacity>
 
@@ -49,13 +49,13 @@ const Audio = ({navigation, route}) => {
           />
         </TouchableOpacity>
       </HeaderSection>
-      <MusicDetailSection>
+      {/* <MusicDetailSection>
         <ContainerJ>
-          {/* <ContainerN>
+          <ContainerN>
             <Image style={styles.image} source={{uri: selectedMusic?.image}} />
-          </ContainerN> */}
+          </ContainerN>
         </ContainerJ>
-      </MusicDetailSection>
+      </MusicDetailSection> */}
       <Text style={styles.title}> title</Text>
       <Text style={styles.name}> Nom musiciens</Text>
       {/* <SliderSection>
@@ -145,17 +145,15 @@ const styles = StyleSheet.create({
   },
   name: {
     fontSize: 25,
-    fontWeight: 900,
     color: '#ffff',
   },
   title: {
     fontSize: 25,
-    fontWeight: 'bold',
+    eight: 'bold',
     color: '#ffff',
   },
   textMinu: {
     fontSize: 12,
-    fontWeight: 'bold',
     color: '#ffff',
   },
 });

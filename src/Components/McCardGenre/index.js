@@ -1,15 +1,18 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet} from 'react-native';
+import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 // import { Metrics } from 'Constants';
 
 const McCardGenre = ({data, navigation}) => {
-  const {item} = data;
-  const toAudio = () => {
-    navigation.navigate('Audio', {selected: item});
-  };
+  const {item, id} = data;
+  // console.log(data);
   return (
-    <View style={styles.container}>
-      <Image style={styles.image} source={item.image} onPress={toAudio} />
+    <View style={styles.container} key={id}>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('Audio', {selected: item});
+        }}>
+        <Image style={styles.image} source={item.image} />
+      </TouchableOpacity>
       <Text style={styles.textGenre}>{item.genre}</Text>
     </View>
   );
@@ -27,7 +30,6 @@ const styles = StyleSheet.create({
     marginTop: 5,
     borderRadius: 5,
     backgroundColor: 'gray',
-    // cursor: 'pointer'
   },
   textGenre: {
     color: '#F5C108',

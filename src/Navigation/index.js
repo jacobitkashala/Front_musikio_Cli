@@ -1,10 +1,11 @@
 import React from 'react';
 import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import {Users, Library, Podcast, Favories} from '../Screens';
+import Fontisto from 'react-native-vector-icons/Fontisto';
 import {McVectorIcon} from '../Components';
+import {Colors} from '../Constants';
 import StacksTab from './navigators/StacksTab';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
-
 const Tab = createMaterialBottomTabNavigator();
 
 const MyTheme = {
@@ -22,7 +23,8 @@ export default function AppNavigator() {
       <Tab.Navigator
         initialRouteName="Player"
         activeColor="#FFFFFF"
-        // barStyle={{backgroundColor: '#000000'}}
+        inactiveColor="#C4C4C4"
+        barStyle={{backgroundColor: Colors.backgroundColor}}
         // sceneContainerStyle={{ backgroundColor: 'red' }}
         // screenOptions={({ route }) => ({
         //   tabBarActiveTintColor: '#FFFFFF',
@@ -30,17 +32,12 @@ export default function AppNavigator() {
         // })}
       >
         <Tab.Screen
-          name="StacksTab"
+          name="Player"
           component={StacksTab}
           options={{
             headerShown: false,
             tabBarIcon: ({color, size}) => (
-              <McVectorIcon
-                type="Fontisto"
-                name="music-note"
-                color={color}
-                size={size}
-              />
+              <Fontisto name="music-note" color={color} size={40} />
             ),
           }}
         />

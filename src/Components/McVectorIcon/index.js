@@ -204,7 +204,7 @@ const McVectorIcon = props => {
 };
 
 McVectorIcon.defaultProps = {
-  size: 24,
+  size: 30,
   style: {},
   onPress: null,
   color: '#757575',

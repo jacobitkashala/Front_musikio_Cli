@@ -11,7 +11,7 @@ function StacksTab() {
         options={{
           headerShown: false,
         }}
-        name="Player"
+        name="Accueil"
         component={Player}
       />
       <Stack.Screen

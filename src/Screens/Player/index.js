@@ -5,13 +5,48 @@ import {
   StyleSheet,
   View,
   // StatusBar,
+  ScrollView,
   TextInput,
   FlatList,
 } from 'react-native';
 import {Images, Colors, Metrics} from '../../Constants';
-import {McCardGenre, McGenre, McBox, McVectorIcon} from '../../Components';
+import {McCardGenre, McGenre, McVectorIcon} from '../../Components';
 
 const Genres = [
+  {
+    id: 1,
+    title: 'Reguer',
+  },
+  {
+    id: 2,
+    title: 'AfroCongo',
+  },
+  {
+    id: 3,
+    title: 'Gospel',
+  },
+  {
+    id: 4,
+    title: 'Salsa',
+  },
+];
+const playLists = [
+  {
+    id: 1,
+    title: 'Reguer',
+  },
+  {
+    id: 2,
+    title: 'AfroCongo',
+  },
+  {
+    id: 3,
+    title: 'Gospel',
+  },
+  {
+    id: 4,
+    title: 'Salsa',
+  },
   {
     id: 1,
     title: 'Reguer',
@@ -51,53 +86,6 @@ const cardData = [
     genre: 'Motivation',
   },
 ];
-const playList = [
-  {
-    id: 1,
-    image: Images.fallytokoss,
-    genre: '1960-1990',
-  },
-  {
-    id: 2,
-    image: Images.ferre,
-    genre: 'romatique',
-  },
-  {
-    id: 3,
-    image: Images.congo60,
-    genre: 'Motivation',
-  },
-  {
-    id: 4,
-    image: Images.michel,
-    genre: 'Motivation',
-  },
-  {
-    id: 5,
-    image: Images.michel,
-    genre: 'Motivation',
-  },
-  {
-    id: 6,
-    image: Images.michel,
-    genre: 'Motivation',
-  },
-  {
-    id: 7,
-    image: Images.michel,
-    genre: 'Motivation',
-  },
-  {
-    id: 8,
-    image: Images.michel,
-    genre: 'Motivation',
-  },
-  {
-    id: 9,
-    image: Images.michel,
-    genre: 'Motivation',
-  },
-];
 
 const Player = ({navigation}) => {
   const size = 50;
@@ -129,7 +117,7 @@ const Player = ({navigation}) => {
           type="EvilIcons"
           name="search"
           color={Colors.primary}
-          size={24}
+          size={40}
           style={styles.search}
         />
         <TextInput
@@ -149,7 +137,7 @@ const Player = ({navigation}) => {
         />
       </View>
       <View>
-        <TextTitle> Genre</TextTitle>
+        <Text style={styles.textColorPrimary}> Genre</Text>
         <FlatList
           data={Genres}
           keyExtractor={item => item.id.toString()}
@@ -157,17 +145,15 @@ const Player = ({navigation}) => {
           renderItem={item => <McGenre data={item} />}
         />
       </View>
-      <TextTitle>PlayList</TextTitle>
-      {/* <View style={styles.menuContenaire}>
-        <McBox data={playList[0].image} />
-        <McBox data={playList[0].image} />
-        <McBox data={playList[0].image} />
-        <McBox data={playList[0].image} />
-        <McBox data={playList[0].image} />
-        <McBox data={playList[0].image} />
-        <McBox data={playList[0].image} />
-        <McBox data={playList[0].image} />
-      </View> */}
+      <Text style={styles.textColorPrimary}>PlayList</Text>
+      <ScrollView>
+        {playLists.map((item, index) => (
+          // <McGenre data={item} key={index} />
+          <Text style={styles.textColorPrimary} key={index}>
+            {index}
+          </Text>
+        ))}
+      </ScrollView>
     </Container>
   );
 };
@@ -176,14 +162,6 @@ const Container = styled.SafeAreaView`
   flex: 1;
   background-color: ${Colors.background};
 `;
-const TextTitle = styled.Text`
-  color: #a0a0a0;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 28px;
-  margin: 10px;
-`;
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,

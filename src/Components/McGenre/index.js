@@ -13,7 +13,7 @@ const McGenre = ({data}) => {
   const color = colorsSwitch(item.title.toLowerCase());
 
   return (
-    <View style={[styles.container, {backgroundColor: color}]}>
+    <View style={[styles.container, {backgroundColor: color}]} key={item.id}>
       <Text style={styles.textGenre}>{item.title}</Text>
     </View>
   );
@@ -30,7 +30,6 @@ const styles = StyleSheet.create({
   textGenre: {
     color: '#ffff',
     fontSize: 20,
-    fontWeight: 'bold',
     textAlign: 'center',
   },
 });
