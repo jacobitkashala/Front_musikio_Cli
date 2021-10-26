@@ -2,7 +2,7 @@
 import McImage from './McImage';
 // import McAvatar from './McAvatar';
 // import McIcon from './McIcon';
-// import McVectorIcon from './McVectorIcon';
+import McVectorIcon from './McVectorIcon';
 // import McBadge from './McBadge';
 // import McTabIcon from './McTabIcon';
 // import McLogo from './McLogo';
@@ -20,7 +20,7 @@ export {
   //   McAvatar,
   McImage,
   //   McIcon,
-  //   McVectorIcon,
+  McVectorIcon,
   //   McBadge,
   //   McPlayList,
   //   McGenre,

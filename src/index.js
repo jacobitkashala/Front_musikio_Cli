@@ -6,8 +6,8 @@ const App = () => {
   const [assetsLoaded, setAssetsLoaded] = useState(true);
 
   const loadAssetsAsync = async () => {
-    console.log('click');
-    // setAssetsLoaded(false);
+    console.log(assetsLoaded);
+    setAssetsLoaded(true);
   };
 
   //   return assetsLoaded ? (

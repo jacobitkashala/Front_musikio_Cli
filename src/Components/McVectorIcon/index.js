@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
-const McVectorIcon = (props) => {
+const McVectorIcon = props => {
   const {type, name, color, size, onPress, style} = props;
   switch (type) {
     case 'AntDesign': {
@@ -44,8 +44,8 @@ const McVectorIcon = (props) => {
     }
 
     case 'SimpleLineIcons': {
-      const SimpleLineIcons = require('react-native-vector-icons/SimpleLineIcons')
-        .default;
+      const SimpleLineIcons =
+        require('react-native-vector-icons/SimpleLineIcons').default;
       return (
         <SimpleLineIcons
           name={name}
@@ -71,8 +71,8 @@ const McVectorIcon = (props) => {
     }
 
     case 'MaterialIcons': {
-      const MaterialIcons = require('react-native-vector-icons/MaterialIcons')
-        .default;
+      const MaterialIcons =
+        require('react-native-vector-icons/MaterialIcons').default;
       return (
         <MaterialIcons
           name={name}
@@ -85,8 +85,8 @@ const McVectorIcon = (props) => {
     }
 
     case 'FontAwesome': {
-      const FontAwesome = require('react-native-vector-icons/FontAwesome')
-        .default;
+      const FontAwesome =
+        require('react-native-vector-icons/FontAwesome').default;
       return (
         <FontAwesome
           name={name}
@@ -99,8 +99,8 @@ const McVectorIcon = (props) => {
     }
 
     case 'Foundation': {
-      const Foundation = require('react-native-vector-icons/Foundation')
-        .default;
+      const Foundation =
+        require('react-native-vector-icons/Foundation').default;
       return (
         <Foundation
           name={name}
@@ -113,8 +113,8 @@ const McVectorIcon = (props) => {
     }
 
     case 'MaterialCommunityIcons': {
-      const MaterialCommunityIcons = require('react-native-vector-icons/MaterialCommunityIcons')
-        .default;
+      const MaterialCommunityIcons =
+        require('react-native-vector-icons/MaterialCommunityIcons').default;
       return (
         <MaterialCommunityIcons
           name={name}
@@ -176,7 +176,8 @@ const McVectorIcon = (props) => {
       );
     }
     case 'FontAwesome5': {
-      const FontAwesome5 = require('react-native-vector-icons/FontAwesome5').default;
+      const FontAwesome5 =
+        require('react-native-vector-icons/FontAwesome5').default;
       return (
         <FontAwesome5
           name={name}
@@ -188,8 +189,8 @@ const McVectorIcon = (props) => {
       );
     }
     default: {
-      const MaterialIcons = require('react-native-vector-icons/MaterialIcons')
-        .default;
+      const MaterialIcons =
+        require('react-native-vector-icons/MaterialIcons').default;
       return (
         <MaterialIcons
           name={name}
