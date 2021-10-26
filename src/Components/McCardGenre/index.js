@@ -1,0 +1,47 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import { View, Text, Image, StyleSheet } from 'react-native';
+import styled from 'styled-components/native';
+// import { Metrics } from 'Constants';
+
+const McCardGenre = ({ data, navigation }) => {
+	const { item } = data;
+	const toAudio = () => {
+		navigation.navigate('Audio', { selectedMusic: item });
+	}
+	return (
+		<View style={styles.container}>
+			<Image
+				style={styles.image}
+				source={{ uri: item.image }}
+				onClick={toAudio}
+			/>
+			<Text style={styles.textGenre}>{item.genre}</Text>
+		</View>
+	)
+
+};
+const styles = StyleSheet.create({
+	container: {
+		width: 150,
+		margin: 2,
+		flexDirection: "column",
+		// gap: "14px",
+	},
+	image: {
+		width: 150,
+		height: 150,
+		marginTop: 5,
+		borderRadius: 5,
+		backgroundColor: 'gray',
+		// cursor: 'pointer'
+	},
+	textGenre: {
+		color: '#F5C108',
+	},
+	text: {
+		color: '#fff',
+	}
+})
+
+export default McCardGenre;
