@@ -93,7 +93,7 @@ const cardData = [
 ];
 
 const Player = ({navigation}) => {
-  const size = 50;
+  const size = 30;
 
   return (
     <Container>
@@ -122,7 +122,7 @@ const Player = ({navigation}) => {
           type="EvilIcons"
           name="search"
           color={Colors.primary}
-          size={40}
+          size={30}
           style={styles.search}
         />
         <TextInput
@@ -193,20 +193,21 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
   },
-  search: {
-    position: 'absolute',
-    margin: Metrics.s20,
-  },
   searchSection: {
-    width: 327,
+    width: 30,
     height: 52,
     flexDirection: 'row',
-    // justifyContent: 'center',
-    margin: 20,
-
+    alignItems: 'center',
+    margin: 'auto',
     padding: 23,
-    backgroundColor: 'rgba(196, 196, 196, 0.16)',
+    // backgroundColor: '#1f1f1f',
+    // backgroundColor: 'rgba(196, 196, 196, 0.16)',
     borderRadius: 26,
+  },
+  search: {
+    position: 'absolute',
+    marginLeft: Metrics.s50,
+    zIndex: 1000,
   },
   textInput: {
     backgroundColor: '#1f1f1f',
@@ -216,7 +217,7 @@ const styles = StyleSheet.create({
     marginLeft: 25,
     borderRadius: 40,
     fontSize: 20,
-    paddingLeft: 20,
+    paddingLeft: 30,
   },
 });
 export default Player;

@@ -8,6 +8,16 @@ const fallytokoss = require('../../assets/images/afficheKOtoss.jpeg');
 const ferre = require('../../assets/images/ferre1.jpg');
 const michel = require('../../assets/images/michelMbakenda.jpeg');
 
+const favorie = require('../../assets/icone/favorie.svg');
+const lecteur = require('../../assets/icone/lecteur.svg');
+const next = require('../../assets/icone/next.svg');
+const one = require('../../assets/icone/one.svg');
+const partage = require('../../assets/icone/partage.svg');
+const prev = require('../../assets/icone/prev.svg');
+const aleatoire = require('../../assets/icone/aleatoire.svg');
+const notFavorie = require('../../assets/icone/notFavorie.svg');
+const telechargement = require('../../assets/icone/telechargement.svg');
+
 export default {
   cover,
   logo,
@@ -18,4 +28,13 @@ export default {
   fallytokoss,
   ferre,
   michel,
+  lecteur,
+  favorie,
+  next,
+  one,
+  partage,
+  prev,
+  aleatoire,
+  notFavorie,
+  telechargement,
 };

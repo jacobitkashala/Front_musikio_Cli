@@ -5,8 +5,16 @@ const Colors = {
   colorBgrLogo: '#fdbe3e',
   colorTitleCard: '#fdbe3e',
 
+  black1: '#313131',
+  black2: '#1f1f1f',
+
   primary: '#fff',
   secondary: '#8F0CE8',
+  yellow: '#F5C108',
+  yellow1: '#E0B51A',
+
+  green1: '#A0A0A0',
+
   accent: '#22DDF2',
   grey0: '#393e42',
   grey1: '#43484d',
@@ -18,6 +26,7 @@ const Colors = {
   success: '#52c41a',
   error: '#ff190c',
   warning: '#faad14',
+
   disabled: 'hsl(208, 8%, 90%)',
 
   black: '#000000',
@@ -27,11 +36,14 @@ const Colors = {
   card: 'rgb(255, 255, 255)',
   notification: 'rgb(255, 59, 48)',
   text: 'rgb(28, 28, 30)',
+  navColor: 'rgba(255, 255, 255, 0.17)',
+
+  black17: 'rgba(255, 255, 255, 0.17)',
+  black50: 'rgba(255, 255, 255, 0.5)',
 
   linearGradient: ['', ''],
 
   transparent: 'rgba(0,0,0,0)',
-
   transparentBlack: 'rgba(0,0,0, 0.6)',
   transparentBlackHard: 'rgba(0,0,0, 0.9)',
 

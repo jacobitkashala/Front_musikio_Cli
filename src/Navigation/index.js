@@ -24,7 +24,14 @@ export default function AppNavigator() {
         initialRouteName="Player"
         activeColor="#FFFFFF"
         inactiveColor="#C4C4C4"
-        barStyle={{backgroundColor: Colors.backgroundColor}}
+        labeled={false}
+        barStyle={{
+          // backgroundColor: Colors.backgroundColor
+          backgroundColor: Colors.backgroundColor,
+          shadowColor: Colors.navColor,
+          // shadowRadius: 20,
+          // borderRadius: 25,
+        }}
         // sceneContainerStyle={{ backgroundColor: 'red' }}
         // screenOptions={({ route }) => ({
         //   tabBarActiveTintColor: '#FFFFFF',
@@ -37,7 +44,7 @@ export default function AppNavigator() {
           options={{
             headerShown: false,
             tabBarIcon: ({color, size}) => (
-              <Fontisto name="music-note" color={color} size={40} />
+              <Fontisto name="music-note" color={color} size={26} />
             ),
           }}
         />
@@ -51,7 +58,7 @@ export default function AppNavigator() {
                 type="MaterialIcons"
                 name="favorite-border"
                 color={color}
-                size={size}
+                size={26}
               />
             ),
           }}
@@ -61,12 +68,12 @@ export default function AppNavigator() {
           component={Library}
           options={{
             headerShown: false,
-            tabBarIcon: ({color, size}) => (
+            tabBarIcon: ({color}) => (
               <McVectorIcon
                 type="Entypo"
                 name="folder-music"
                 color={color}
-                size={size}
+                size={26}
               />
             ),
           }}
@@ -81,7 +88,7 @@ export default function AppNavigator() {
                 type="FontAwesome"
                 name="microphone"
                 color={color}
-                size={size}
+                size={26}
               />
             ),
           }}
@@ -96,7 +103,7 @@ export default function AppNavigator() {
                 type="FontAwesome5"
                 name="user-circle"
                 color={color}
-                size={size}
+                size={25}
               />
             ),
           }}
