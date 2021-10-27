@@ -8,15 +8,15 @@ const fallytokoss = require('../../assets/images/afficheKOtoss.jpeg');
 const ferre = require('../../assets/images/ferre1.jpg');
 const michel = require('../../assets/images/michelMbakenda.jpeg');
 
-const favorie = require('../../assets/icone/favorie.svg');
-const lecteur = require('../../assets/icone/lecteur.svg');
-const next = require('../../assets/icone/next.svg');
-const one = require('../../assets/icone/one.svg');
-const partage = require('../../assets/icone/partage.svg');
-const prev = require('../../assets/icone/prev.svg');
-const aleatoire = require('../../assets/icone/aleatoire.svg');
-const notFavorie = require('../../assets/icone/notFavorie.svg');
-const telechargement = require('../../assets/icone/telechargement.svg');
+const favorie = require('../../assets/icone/favorie.png');
+const lecteur = require('../../assets/icone/lecteur.png');
+const next = require('../../assets/icone/next.png');
+const one = require('../../assets/icone/one.png');
+const partage = require('../../assets/icone/partage.png');
+const prev = require('../../assets/icone/prev.png');
+const aleatoire = require('../../assets/icone/aleatoire.png');
+const notFavorie = require('../../assets/icone/notFavorie.png');
+const telechargement = require('../../assets/icone/telechargement.png');
 
 export default {
   cover,

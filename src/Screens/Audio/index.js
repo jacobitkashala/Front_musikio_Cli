@@ -20,13 +20,15 @@ import {Colors, Metrics, Images} from '../../Constants';
 //   ,
 
 const Audio = ({navigation, route}) => {
-  //{id: 1, image: '/static/media/afficheKOtoss.4633f8b1.jpeg', genre: '1960-1990'}
   const [selectedMusic, setSelectedMusic] = useState(null);
-  // console.log(selectedMusic?.image);
-
+  const [step, setStep] = useState(0);
+  const [isFavorie, setIsFavorie] = useState(false);
+  const [srcFavorie, setSrcFavorie] = useState(Images.notFavorie);
+  // console.log(Images?.one);Images
   useEffect(() => {
     const {item} = route.params;
     setSelectedMusic(item);
+    // setSrcFavorie(isFavorie ? Images.notFavorie : Images.favorie);
   }, []);
 
   return (
@@ -56,28 +58,46 @@ const Audio = ({navigation, route}) => {
       <View style={styles.containerInfo}>
         <Text style={styles.title}>Nom Group</Text>
         <Text style={styles.name}>{selectedMusic?.genre} </Text>
-        <Image style={styles.image} source={Images.favorie} />
+        <TouchableOpacity
+          onPress={() => {
+            setIsFavorie(prev => !prev);
+            console.log(isFavorie);
+          }}>
+          <Image source={srcFavorie} />
+        </TouchableOpacity>
       </View>
       <View style={styles.minutes}>
-        <Text style={styles.title}>0:17</Text>
+        <Text style={styles.title}>{step}</Text>
         <Text style={styles.name}>2:15 </Text>
       </View>
       <View style={styles.slider}>
         <Slider
+          onSlidingStart={() => {
+            console.log('recuper curser');
+          }}
+          onSlidingComplete={value => {
+            setStep(value);
+            console.log('la valeur est :', value);
+          }}
+          onValueChange={value => {
+            console.log('bien actuell', value);
+          }}
+          style={styles.height4}
           minimumValue={0}
           maximumValue={1}
           value={0.3}
+          thumbTintColor={Colors.yellow}
           minimumTrackTintColor={Colors.black50}
-          maximumTrackTintColor={Colors.yellow1}
-          thumbImage={selectedMusic.image}
+          maximumTrackTintColor={Colors.yellow}
+          // thumbImage={selectedMusic?.image}
         />
       </View>
       <View style={styles.controlerBttons}>
-        <Image style={styles.one} source={Images.one} />
-        <Image style={styles.two} source={Images.prev} />
-        <Image style={styles.lecteur} source={Images.lecteur} />
-        <Image style={styles.two} source={Images.next} />
-        <Image style={styles.one} source={Images.partage} />
+        <Image style={styles.one} source={Images?.one} />
+        <Image style={styles.two} source={Images?.prev} />
+        <Image style={styles.lecteur} source={Images?.lecteur} />
+        <Image style={styles.two} source={Images?.next} />
+        <Image style={styles.one} source={Images?.partage} />
       </View>
     </Container>
   );
@@ -102,26 +122,27 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  height4: {height: 4},
   rondJaun: {
     backgroundColor: Colors.yellow,
-    width: 352,
-    height: 352,
-    borderRadius: 352 / 2,
+    width: 302,
+    height: 302,
+    borderRadius: 302 / 2,
     justifyContent: 'center',
     alignItems: 'center',
   },
   rondBlanck1: {
     backgroundColor: Colors.black1,
-    width: 340,
-    height: 340,
-    borderRadius: 340 / 2,
+    width: 290,
+    height: 290,
+    borderRadius: 290 / 2,
     justifyContent: 'center',
     alignItems: 'center',
   },
   image: {
-    width: 303,
-    height: 303,
-    borderRadius: 303 / 2,
+    width: 253,
+    height: 253,
+    borderRadius: 253 / 2,
     backgroundColor: 'gray',
   },
   containerInfo: {
@@ -152,7 +173,10 @@ const styles = StyleSheet.create({
     color: '#ffff',
   },
   controlerBttons: {
-    justifyContent: 'center',
+    marginTop: Metrics.s10,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
   one: {
     width: 37,
