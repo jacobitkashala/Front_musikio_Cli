@@ -7,9 +7,7 @@ import McVectorIcon from './McVectorIcon';
 import McCardGenre from './McCardGenre';
 import McGenre from './McGenre';
 // import McPlayList from './McPlayList';
-import McBox from './McBox';
 export {
-  McBox,
   //   McBtnPlay,
   McCardGenre,
   McAvatar,

@@ -9,7 +9,7 @@ const McCardGenre = ({data, navigation}) => {
     <View style={styles.container} key={id}>
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate('Audio', {selected: item});
+          navigation.navigate('Audio', {item: item});
         }}>
         <Image style={styles.image} source={item.image} />
       </TouchableOpacity>
@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'gray',
   },
   textGenre: {
+    fontSize: 20,
     color: '#F5C108',
   },
   text: {

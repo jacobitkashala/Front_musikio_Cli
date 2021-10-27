@@ -1,4 +1,4 @@
-import Home from './Home';
+// import Home from './Home';
 import Profile from './Profile';
 import Onboarding from './Onboarding';
 import Player from './Player';
@@ -8,15 +8,4 @@ import Favories from './Favories';
 import Podcast from './Podcast';
 import Audio from './Audio';
 
-export {
-  Audio,
-  Users,
-  Library,
-  Podcast,
-  Favories,
-  Home,
-  Onboarding,
-  Player,
-  Profile,
-};
-// export {Onboarding, Player, Audio};
+export {Audio, Users, Library, Podcast, Favories, Onboarding, Player, Profile};

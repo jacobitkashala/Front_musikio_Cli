@@ -85,6 +85,11 @@ const cardData = [
     image: Images.michel,
     genre: 'Motivation',
   },
+  {
+    id: 5,
+    image: Images.michel,
+    genre: 'Motivation',
+  },
 ];
 
 const Player = ({navigation}) => {

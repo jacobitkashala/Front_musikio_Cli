@@ -1,14 +1,15 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useState, useEffect} from 'react';
 import {
   StatusBar,
-  //   View,
+  View,
   Text,
   TouchableOpacity,
-  //   Image,
+  Image,
   StyleSheet,
 } from 'react-native';
 import styled from 'styled-components/native';
-// import Slider from '@react-native-community/slider'
+import Slider from '@react-native-community/slider';
 import {McVectorIcon} from '../../Components';
 import {Colors} from '../../Constants';
 
@@ -18,13 +19,14 @@ const Audio = ({navigation, route}) => {
   console.log(selectedMusic);
 
   useEffect(() => {
-    let {selected} = route.params;
-    setSelectedMusic(selected);
-  }, [route.params]);
+    const {item} = route.params;
+    setSelectedMusic(item);
+  }, []);
+
   return (
-    <Container>
+    <Container key={selectedMusic?.id}>
       <StatusBar barStyle="light-content" />
-      <HeaderSection>
+      <View>
         <TouchableOpacity
           onPress={() => {
             navigation.goBack();
@@ -48,14 +50,14 @@ const Audio = ({navigation, route}) => {
             size={24}
           />
         </TouchableOpacity>
-      </HeaderSection>
-      {/* <MusicDetailSection>
-        <ContainerJ>
-          <ContainerN>
+      </View>
+      <View>
+        <View>
+          {/* <ContainerN>
             <Image style={styles.image} source={{uri: selectedMusic?.image}} />
-          </ContainerN>
-        </ContainerJ>
-      </MusicDetailSection> */}
+          </ContainerN> */}
+        </View>
+      </View>
       <Text style={styles.title}> title</Text>
       <Text style={styles.name}> Nom musiciens</Text>
       {/* <SliderSection>
@@ -73,7 +75,7 @@ const Audio = ({navigation, route}) => {
 					<Text style={styles.textMinu}>2:9</Text>
 				</View>
 			</SliderSection> */}
-      <ControlSection>
+      <View>
         <TouchableOpacity
           onPress={() => {
             navigation.goBack();
@@ -97,7 +99,7 @@ const Audio = ({navigation, route}) => {
             size={24}
           />
         </TouchableOpacity>
-      </ControlSection>
+      </View>
     </Container>
   );
 };
@@ -123,18 +125,14 @@ borderRadius: 90px,
 background-color:gray,
 `;
 
-// const ContainerN = styled.View`
-// width: 170,
-// height: 170,
-// borderRadius: 85,
-// background-color:yellow,
-// `;
-
-const ControlSection = styled.View`
-  margin: 0px 24px;
-  flex-direction: row;
-  justify-content: space-between;
+const ContainerN = styled.View`
+width: 170,
+height: 170,
+borderRadius: 85,
+background-color:yellow,
 `;
+
+const ControlSection = styled.View``;
 const styles = StyleSheet.create({
   image: {
     width: 160,
@@ -149,12 +147,16 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 25,
-    eight: 'bold',
     color: '#ffff',
   },
   textMinu: {
     fontSize: 12,
     color: '#ffff',
+  },
+  controlSection: {
+    margin: 24,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
 });
 
