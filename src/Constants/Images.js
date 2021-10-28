@@ -17,6 +17,8 @@ const prev = require('../../assets/icone/prev.png');
 const aleatoire = require('../../assets/icone/aleatoire.png');
 const notFavorie = require('../../assets/icone/notFavorie.png');
 const telechargement = require('../../assets/icone/telechargement.png');
+const gratuit = require('../../assets/icone/iconeGratuit.png');
+const payant = require('../../assets/icone/iconePayant.png');
 
 export default {
   cover,
@@ -37,4 +39,6 @@ export default {
   aleatoire,
   notFavorie,
   telechargement,
+  payant,
+  gratuit,
 };

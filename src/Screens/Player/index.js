@@ -10,7 +10,7 @@ import {
   FlatList,
 } from 'react-native';
 import {Images, Colors, Metrics} from '../../Constants';
-import {McCardGenre, McGenre, McVectorIcon} from '../../Components';
+import {McCardGenre, McSon, McGenre, McVectorIcon} from '../../Components';
 
 const Genres = [
   {
@@ -33,35 +33,73 @@ const Genres = [
 const playLists = [
   {
     id: 1,
-    title: 'Reguer',
+    image: Images.fallytokoss,
+    title: 'TOKOSS',
+    autor: 'Fally Ipupa',
+    mode: 'gratuit',
   },
   {
     id: 2,
-    title: 'AfroCongo',
+    image: Images.ferre,
+    title: 'BIEN',
+    autor: 'FERRE GOLA',
+    mode: 'gratuit',
   },
   {
     id: 3,
-    title: 'Gospel',
+    image: Images.congo60,
+    title: 'LIPENDANT',
+    autor: 'WEMBA',
+    mode: 'gratuit',
   },
   {
     id: 4,
-    title: 'Salsa',
+    image: Images.michel,
+    title: 'CONGO',
+    autor: 'Michel',
+    mode: 'gratuit',
   },
   {
-    id: 1,
-    title: 'Reguer',
+    id: 5,
+    image: Images.michel,
+    title: 'VICTOIR',
+    autor: 'Fally Ipupa',
+    mode: 'payant',
   },
   {
-    id: 2,
-    title: 'AfroCongo',
+    id: 6,
+    image: Images.michel,
+    title: 'VICTOIR',
+    autor: 'Fally Ipupa',
+    mode: 'payant',
   },
   {
-    id: 3,
-    title: 'Gospel',
+    id: 7,
+    image: Images.michel,
+    title: 'VICTOIR',
+    autor: 'Fally Ipupa',
+    mode: 'payant',
   },
   {
-    id: 4,
-    title: 'Salsa',
+    id: 8,
+    image: Images.michel,
+    title: 'VICTOIR',
+    autor: 'Fally Ipupa',
+    mode: 'payant',
+  },
+  {
+    id: 9,
+    image: Images.michel,
+    title: 'VICTOIR',
+    autor: 'Fally Ipupa',
+    mode: 'payant',
+  },
+  {
+    id: 10,
+    image: Images.michel,
+    title: 'VICTOIR',
+    autor: 'Fally Ipupa',
+    mode: 'payant',
   },
 ];
 const cardData = [
@@ -87,6 +125,31 @@ const cardData = [
   },
   {
     id: 5,
+    image: Images.michel,
+    genre: 'Motivation',
+  },
+  {
+    id: 6,
+    image: Images.michel,
+    genre: 'Motivation',
+  },
+  {
+    id: 7,
+    image: Images.michel,
+    genre: 'Motivation',
+  },
+  {
+    id: 9,
+    image: Images.michel,
+    genre: 'Motivation',
+  },
+  {
+    id: 10,
+    image: Images.michel,
+    genre: 'Motivation',
+  },
+  {
+    id: 11,
     image: Images.michel,
     genre: 'Motivation',
   },
@@ -154,9 +217,7 @@ const Player = ({navigation}) => {
       <ScrollView>
         {playLists.map((item, index) => (
           // <McGenre data={item} key={index} />
-          <Text style={styles.textColorPrimary} key={index}>
-            {index}
-          </Text>
+          <McSon son={item} key={index} />
         ))}
       </ScrollView>
     </Container>

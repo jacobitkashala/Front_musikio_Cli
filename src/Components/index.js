@@ -5,14 +5,14 @@ import McVectorIcon from './McVectorIcon';
 // import McTabIcon from './McTabIcon';
 // import McBtnPlay from './McBtnPlay';
 import McCardGenre from './McCardGenre';
+import McSon from './McSon';
 import McGenre from './McGenre';
 // import McPlayList from './McPlayList';
 export {
   //   McBtnPlay,
   McCardGenre,
   McAvatar,
-  // McImage,
-  //   McIcon,
+  McSon,
   McVectorIcon,
   // McBadge,
   //   McPlayList,
