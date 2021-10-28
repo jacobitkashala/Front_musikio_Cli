@@ -23,13 +23,17 @@ const Audio = ({navigation, route}) => {
   const [selectedMusic, setSelectedMusic] = useState(null);
   const [step, setStep] = useState(0);
   const [isFavorie, setIsFavorie] = useState(false);
-  const [srcFavorie] = useState(Images.notFavorie);
-  // console.log(Images?.one);Images setSrcFavorie
+  const [srcFavorie, setSrcFavorie] = useState(Images.favorie);
+  // console.log(Images?.one);Images
   useEffect(() => {
     const {item} = route.params;
     setSelectedMusic(item);
     // setSrcFavorie(isFavorie ? Images.notFavorie : Images.favorie);
   }, []);
+  useEffect(() => {
+    const src = isFavorie ? Images.notFavorie : Images.favorie;
+    setSrcFavorie(src);
+  }, [isFavorie]);
 
   return (
     <Container key={selectedMusic?.id}>
@@ -61,7 +65,7 @@ const Audio = ({navigation, route}) => {
         <TouchableOpacity
           onPress={() => {
             setIsFavorie(prev => !prev);
-            console.log(isFavorie);
+            // console.log(isFavorie);
           }}>
           <Image source={srcFavorie} />
         </TouchableOpacity>

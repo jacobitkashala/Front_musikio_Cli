@@ -23,9 +23,13 @@ const user = require('../../assets/icone/iconeUser.png');
 const musicUploader = require('../../assets/icone/musicUploader.png');
 const nbrLike = require('../../assets/icone/nbrLike.png');
 const tresor = require('../../assets/icone/tresor.png');
+const download = require('../../assets/icone/download.png');
+const logout = require('../../assets/icone/logout.png');
 
 export default {
   nbrLike,
+  download,
+  logout,
   tresor,
   cover,
   musicUploader,

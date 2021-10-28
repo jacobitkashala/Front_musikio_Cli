@@ -1,5 +1,4 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import React, {useState, useEffect} from 'react';
+import React from 'react'; //{useState, useEffect}
 import {
   StatusBar,
   View,
@@ -11,7 +10,7 @@ import {
 import styled from 'styled-components/native';
 import {McVectorIcon} from '../../Components';
 import {Colors, Metrics, Images} from '../../Constants';
-const Users = ({navigation, route}) => {
+const Users = ({navigation}) => {
   //   const [selectedMusic, setSelectedMusic] = useState(null);
   //   const [step, setStep] = useState(0);
   //   const [isFavorie, setIsFavorie] = useState(false);
@@ -29,7 +28,7 @@ const Users = ({navigation, route}) => {
       <View style={styles.header}>
         <TouchableOpacity
           onPress={() => {
-            navigation.goBack();
+            navigation.navigate('Player');
           }}>
           <McVectorIcon
             type="AntDesign"
@@ -41,14 +40,27 @@ const Users = ({navigation, route}) => {
       </View>
       <View style={styles.containerDis}>
         <View style={styles.user}>
-          <Image style={styles.image} source={Images.user} />
+          <Image style={styles.imageUser} source={Images.user} />
+          <Text style={styles.title}>Nom</Text>
+          <Text style={styles.title}>Role</Text>
         </View>
         <View style={styles.compt}>
-          <View>
-            <Image style={styles.image} source={Images.user} />
-            <Text>500</Text>
+          <View style={styles.row}>
+            <Image style={styles.upload} source={Images.nbrLike} />
+            <Text style={styles.title}> : 500K</Text>
+          </View>
+          <View style={styles.row}>
+            <Image style={styles.upload} source={Images.musicUploader} />
+            <Text style={styles.title}> : 500K</Text>
+          </View>
+          <View style={styles.row}>
+            <Image style={styles.upload} source={Images.download} />
+            <Text style={styles.title}> : 500K</Text>
           </View>
         </View>
+      </View>
+      <View style={styles.logout}>
+        <Image style={styles.logoutImage} source={Images.logout} />
       </View>
     </Container>
   );
@@ -65,21 +77,23 @@ const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'space-between',
     borderRadius: 5,
-    backgroundColor: Colors.black2,
     // alignItems: 'center',
   },
   containerDis: {
     display: 'flex',
-    justifyContent: 'center',
+    flexDirection: 'row',
+    backgroundColor: Colors.black2,
+    justifyContent: 'space-between',
     alignItems: 'center',
   },
-  height4: {height: 4},
-  rondJaun: {
-    backgroundColor: Colors.yellow,
-    width: 302,
-    height: 302,
-    borderRadius: 302 / 2,
-    justifyContent: 'center',
+  user: {
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+  },
+  row: {
+    display: 'flex',
+    flexDirection: 'row',
+    // justifyContent: 'center',
     alignItems: 'center',
   },
   rondBlanck1: {
@@ -91,9 +105,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   image: {
-    width: 253,
-    height: 253,
-    borderRadius: 253 / 2,
+    width: 100,
+    height: 100,
+    // borderRadius: 253 / 2,
     backgroundColor: 'gray',
   },
   containerInfo: {
@@ -129,17 +143,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
   },
-  one: {
-    width: 37,
-    height: 37,
-  },
-  two: {
-    width: 36,
-    height: 36,
-  },
-  lecteur: {
-    width: 75,
-    height: 75,
+  logout: {
+    left: 0,
+    bottom: 0,
   },
 });
 
