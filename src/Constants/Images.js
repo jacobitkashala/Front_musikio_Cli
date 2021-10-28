@@ -19,9 +19,16 @@ const notFavorie = require('../../assets/icone/notFavorie.png');
 const telechargement = require('../../assets/icone/telechargement.png');
 const gratuit = require('../../assets/icone/iconeGratuit.png');
 const payant = require('../../assets/icone/iconePayant.png');
+const user = require('../../assets/icone/iconeUser.png');
+const musicUploader = require('../../assets/icone/musicUploader.png');
+const nbrLike = require('../../assets/icone/nbrLike.png');
+const tresor = require('../../assets/icone/tresor.png');
 
 export default {
+  nbrLike,
+  tresor,
   cover,
+  musicUploader,
   logo,
   home,
   profile,
@@ -41,4 +48,5 @@ export default {
   telechargement,
   payant,
   gratuit,
+  user,
 };

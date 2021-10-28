@@ -23,8 +23,8 @@ const Audio = ({navigation, route}) => {
   const [selectedMusic, setSelectedMusic] = useState(null);
   const [step, setStep] = useState(0);
   const [isFavorie, setIsFavorie] = useState(false);
-  const [srcFavorie, setSrcFavorie] = useState(Images.notFavorie);
-  // console.log(Images?.one);Images
+  const [srcFavorie] = useState(Images.notFavorie);
+  // console.log(Images?.one);Images setSrcFavorie
   useEffect(() => {
     const {item} = route.params;
     setSelectedMusic(item);

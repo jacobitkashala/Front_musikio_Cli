@@ -199,9 +199,7 @@ const Player = ({navigation}) => {
           data={cardData}
           keyExtractor={item => item.id.toString()}
           horizontal
-          renderItem={item => (
-            <McCardGenre data={item} navigation={navigation} />
-          )}
+          renderItem={item => <McCardGenre data={item} />}
         />
       </View>
       <View>
@@ -217,7 +215,7 @@ const Player = ({navigation}) => {
       <ScrollView>
         {playLists.map((item, index) => (
           // <McGenre data={item} key={index} />
-          <McSon son={item} key={index} />
+          <McSon son={item} key={index} navigation={navigation} />
         ))}
       </ScrollView>
     </Container>

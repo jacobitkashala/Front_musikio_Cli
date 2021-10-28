@@ -3,19 +3,25 @@ import React from 'react';
 import {
   View,
   //   TouchableWithoutFeedback,
+  TouchableOpacity,
   Text,
   Image,
   StyleSheet,
 } from 'react-native';
 import {Images} from '../../Constants';
 
-const McSon = ({son}) => {
+const McSon = ({son, navigation}) => {
   const {id, image, title, autor, mode} = son;
   const choseImage = mode === 'gratuit' ? Images.gratuit : Images.payant;
 
   return (
     <View style={styles.container} key={id}>
-      <Image style={styles.imageSon} source={image} />
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('Audio', {item: son});
+        }}>
+        <Image style={styles.imageSon} source={image} />
+      </TouchableOpacity>
       <View style={styles.containerInfo}>
         <Text style={styles.non}>{title}</Text>
         <View style={styles.modeTitle}>
